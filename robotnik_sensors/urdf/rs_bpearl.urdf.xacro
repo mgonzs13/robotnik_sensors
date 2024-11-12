@@ -3,7 +3,7 @@
 
   <xacro:property name="M_PI" value="3.1415926535897931" />
 
-  <xacro:macro name="sensor_rs_bpearl" params="prefix parent prefix_topic *origin range_min range_max hfov samples vfov lasers fps gpu:=true">
+  <xacro:macro name="sensor_rs_bpearl" params="prefix parent prefix_topic node_name *origin range_min range_max hfov samples vfov lasers fps gpu:=true">
 
 
     <joint name="${prefix}_base_joint" type="fixed">
@@ -46,11 +46,11 @@
     </joint>
     <link name="${prefix}_link"/>
 
-    <xacro:sensor_rs_bpearl_gazebo prefix="${prefix}" range_min="${range_min}" range_max="${range_max}" hfov="${hfov}" samples="${samples}" vfov="${vfov}" lasers="${lasers}" fps="${fps}" gpu="${gpu}"/>
+    <xacro:sensor_rs_bpearl_gazebo prefix="${prefix}" prefix_topic="${prefix_topic}" node_name="${node_name}" range_min="${range_min}" range_max="${range_max}" hfov="${hfov}" samples="${samples}" vfov="${vfov}" lasers="${lasers}" fps="${fps}" gpu="${gpu}"/>
 
   </xacro:macro>
 
-  <xacro:macro name="sensor_rs_bpearl_gazebo" params="prefix range_min range_max hfov samples vfov lasers fps gpu">
+  <xacro:macro name="sensor_rs_bpearl_gazebo" params="prefix prefix_topic node_name range_min range_max hfov samples vfov lasers fps gpu">
 
     <gazebo reference="${prefix}_base_link">
       <visual>  
@@ -110,7 +110,10 @@
             </noise>
           </ray>
           <plugin name="${prefix}_controller" filename="${plugin_lib}">
-            <topicName>${prefix_topic}/points</topicName>
+          <ros>
+            <namespace>${node_name}</namespace>
+            <remapping>~/out:=${prefix_topic}/points</remapping>
+          </ros>
             <gaussian_noise>0.008</gaussian_noise>
             <organize_cloud>0</organize_cloud>
             <frame_name>${prefix}_base_link</frame_name>
