@@ -43,6 +43,11 @@
       </inertial>
     </link>
 
+    <gazebo reference="${frame_prefix}base_link">
+        <material>Gazebo/Grey</material>
+        <gravity>true</gravity>
+    </gazebo>
+
     <joint name="${frame_prefix}joint" type="fixed">
       <parent link="${frame_prefix}base_link"/>
       <child link="${frame_prefix}link"/>

@@ -50,9 +50,9 @@
 	  </link>
 
 	<gazebo reference="${frame_prefix}base_link">
-	    <material>Gazebo/White</material>
+	    <material>Gazebo/Grey</material>
 	    <gravity>true</gravity>
-	  </gazebo>
+	</gazebo>
 
     <xacro:if value="${simulation}">
 
