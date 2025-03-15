@@ -109,7 +109,7 @@
         <sensor name="${frame_prefix}right_sensor" type="camera">
           <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
           <visualize>false</visualize>
-          <update_rate>30</update_rate>
+          <update_rate>${video_fps}</update_rate>
           <camera>
             <horizontal_fov>${radians(float(horizontal_fov))}</horizontal_fov>
             <vertical_fov>${radians(float(vertical_fov))}</vertical_fov>
@@ -143,7 +143,7 @@
         <sensor name="${frame_prefix}left_sensor" type="camera">
           <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
           <visualize>false</visualize>
-          <update_rate>30</update_rate>
+          <update_rate>${video_fps}</update_rate>
           <camera>
             <horizontal_fov>${radians(float(horizontal_fov))}</horizontal_fov>
             <vertical_fov>${radians(float(vertical_fov))}</vertical_fov>
@@ -177,7 +177,7 @@
         <sensor name="${frame_prefix}sensor" type="depth">
           <pose>0.0 0.0 0.0 0.0 0.0 0.0</pose>
           <visualize>false</visualize>
-          <update_rate>30</update_rate>
+          <update_rate>${video_fps}</update_rate>
           <camera>
             <horizontal_fov>${radians(float(horizontal_fov))}</horizontal_fov>
             <vertical_fov>${radians(float(vertical_fov))}</vertical_fov>

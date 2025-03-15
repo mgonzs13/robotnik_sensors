@@ -11,7 +11,9 @@
   <xacro:include filename="$(find robotnik_sensors)/urdf/depth/orbbec_astra.urdf.xacro" />
   <xacro:include filename="$(find robotnik_sensors)/urdf/depth/stereolabs_generic.urdf.xacro" />
   <xacro:include filename="$(find robotnik_sensors)/urdf/depth/stereolabs_zed2.urdf.xacro" />
+  <xacro:include filename="$(find robotnik_sensors)/urdf/depth/stereolabs_zed2_low_res.urdf.xacro" />
   <xacro:include filename="$(find robotnik_sensors)/urdf/depth/stereolabs_zed2i.urdf.xacro" />
+  <xacro:include filename="$(find robotnik_sensors)/urdf/depth/stereolabs_zed2i_low_res.urdf.xacro" />
   <xacro:include filename="$(find robotnik_sensors)/urdf/depth/azure_kinect.urdf.xacro" />
 
   <!-- 2D Lidars -->
