@@ -190,35 +190,35 @@
           <plugin name="${node_name}" filename="libgazebo_ros_camera.so">
             <ros>
               <namespace>${node_namespace}</namespace>
-              <remapping>~/image_raw:=${topic_prefix}rgb/image_raw_color</remapping>
+              <remapping>~/image_raw:=${topic_prefix}rgb/image_rect_color</remapping>
               <remapping>~/camera_info:=${topic_prefix}rgb/camera_info</remapping>
               <remapping>~/points:=${topic_prefix}point_cloud/cloud_registered</remapping>
               <remapping>~/depth/camera_info:=${topic_prefix}depth/camera_info</remapping>
               <remapping>~/depth/image_raw:=${topic_prefix}depth/depth_registered</remapping>
               <qos>
-                <topic name="${topic_prefix}rgb/image_raw_color">
+                <topic name="${topic_prefix}rgb/image_rect_color">
                   <publisher>
-                    <reliability>best_effort</reliability>
+                    <reliability>reliable</reliability>
                   </publisher>
                 </topic>
                 <topic name="${topic_prefix}rgb/camera_info">
                   <publisher>
-                    <reliability>best_effort</reliability>
+                    <reliability>reliable</reliability>
                   </publisher>
                 </topic>
                 <topic name="${topic_prefix}point_cloud/cloud_registered">
                   <publisher>
-                    <reliability>best_effort</reliability>
+                    <reliability>reliable</reliability>
                   </publisher>
                 </topic>
                 <topic name="${topic_prefix}depth/camera_info">
                   <publisher>
-                    <reliability>best_effort</reliability>
+                    <reliability>reliable</reliability>
                   </publisher>
                 </topic>
                 <topic name="${topic_prefix}depth/depth_registered">
                   <publisher>
-                    <reliability>best_effort</reliability>
+                    <reliability>reliable</reliability>
                   </publisher>
                 </topic>
               </qos>
