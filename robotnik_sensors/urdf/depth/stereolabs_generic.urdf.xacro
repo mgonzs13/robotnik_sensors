@@ -191,7 +191,7 @@
             <ros>
               <namespace>${node_namespace}</namespace>
               <remapping>~/image_raw:=${topic_prefix}rgb/image_rect_color</remapping>
-              <remapping>~/camera_info:=${topic_prefix}rgb/camera_info</remapping>
+              <remapping>~/camera_info:=${topic_prefix}camera_info</remapping>
               <remapping>~/points:=${topic_prefix}point_cloud/cloud_registered</remapping>
               <remapping>~/depth/camera_info:=${topic_prefix}depth/camera_info</remapping>
               <remapping>~/depth/image_raw:=${topic_prefix}depth/depth_registered</remapping>
