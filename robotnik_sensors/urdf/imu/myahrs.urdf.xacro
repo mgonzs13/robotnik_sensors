@@ -117,7 +117,7 @@
           <plugin name="${node_name}" filename="libgazebo_ros_imu_sensor.so">
             <ros>
               <namespace>${node_namespace}</namespace>
-              <remapping>~/out:=${topic_prefix}data_raw</remapping>
+              <remapping>~/out:=${topic_prefix}data</remapping>
             </ros>
             <initial_orientation_as_reference>false</initial_orientation_as_reference>
             <frame_name>${frame_prefix}link</frame_name>
