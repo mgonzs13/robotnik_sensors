@@ -224,7 +224,7 @@
               </qos>
             </ros>
             <camera_name>${node_name}</camera_name>
-            <frame_name>${frame_prefix}depth_optical_frame</frame_name>
+            <frame_name>${frame_prefix}left_camera_optical_frame</frame_name>
             <min_depth>${min_depth}</min_depth>
             <max_depth>${max_depth}</max_depth>
           </plugin>
